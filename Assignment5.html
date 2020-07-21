@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function validateFirstName() {
+		//for checking first name
+		// body...
+			var fName=document.getElementById("firstName").value;
+			var rel=/^[a-zA-z\s\'\-]{2,15}$/;
+
+			if (rel.test(fName)) {
+				document.getElementById("firstNamePrompt").style.color="green";
+				document.getElementById("firstNamePrompt").innerHTML="<strong>valid</strong>";
+				return true;
+			}
+			else{
+				document.getElementById("firstNamePrompt").style.color="Red";
+				document.getElementById("firstNamePrompt").innerHTML="<strong>Length of string should be b/w 2 & 15</strong>";
+				return false;
+			}
+		}
+
+		function validateLastName() {
+			//for checking last name
+			// body...
+			var lName=document.getElementById("lastName").value;
+			var rel=/^[a-zA-z\s\'\-]{2,15}$/;
+
+			if (rel.test(lName)) {
+				document.getElementById("lastNamePrompt").style.color="green";
+				document.getElementById("lastNamePrompt").innerHTML="<storng>valid</storng>";
+				return true;
+			}
+			else{
+				document.getElementById("lastNamePrompt").style.color="Red";
+				document.getElementById("lastNamePrompt").innerHTML="<storng>Length of string should be b/w 2 & 15</storng>";
+				return false;
+			}
+		}
+
+		function validatePhone() {
+			//for checking Phone number
+			// body...
+			var fName=document.getElementById("phone").value;
+			var rel=/^\d{3}\d{3}\d{4}$/;
+
+			if (rel.test(fName)) {
+				document.getElementById("phonePrompt").style.color="green";
+				document.getElementById("phonePrompt").innerHTML="<storng>valid</storng>";
+				return (true);
+			}
+			else{
+				document.getElementById("phonePrompt").style.color="Red";
+				document.getElementById("phonePrompt").innerHTML="<storng>Use xxxxxxxxxx</storng>";
+				return (false);
+			}
+		}
+		function validateAddhar() {
+			//for checking Addhar
+			// body...
+			var fName=document.getElementById("Aadhar").value;
+			var rel=/^\d{3}\d{3}\d{6}$/;
+
+			if (rel.test(fName)) {
+				document.getElementById("AddharPrompt").style.color="green";
+				document.getElementById("AddharPrompt").innerHTML="<storng>valid</storng>";
+				return (true);
+			}
+			else{
+				document.getElementById("AddharPrompt").style.color="Red";
+				document.getElementById("AddharPrompt").innerHTML="<storng>Use 12 digit number</storng>";
+				return (false);
+			}
+		}
+		function validatePINCode() {
+			//for checking pincode
+			// body...
+			var pincode=document.getElementById("pincode").value;
+			var rel=/^\d{6}$/;
+
+			if (rel.test(pincode)) {
+				document.getElementById("pinPrompt").style.color="green";
+				document.getElementById("pinPrompt").innerHTML="<storng>valid</storng>";
+				return (true);
+			}
+			else{
+				document.getElementById("pinPrompt").style.color="Red";
+				document.getElementById("pinPrompt").innerHTML="<storng>Use xxxxxx</storng>";
+				return (false);
+			}
+		}
+		function checkModel(){
+			//for checking model
+			var model=document.getElementById("food").value;
+
+			if(model.equals("OnePlus8")){
+				document.getElementById("phoneprice").style.color="lightgray";
+				document.getElementById("phoneprice").innerHTML="<storng>Price is 54,000</storng>";
+			}
+			if(model.equals("OnePlus7T")){
+				document.getElementById("phoneprice").style.color="lightgray";
+				document.getElementById("phoneprice").innerHTML="<storng>Price is 50,000</storng>";
+			}
+			if(model.equals("OnePlus7")){
+				document.getElementById("phoneprice").style.color="lightgray";
+				document.getElementById("phoneprice").innerHTML="<storng>Price is 46,000</storng>";
+			}
+		}
+		function validateForm() {
+			//for checking password
+			// body...
+			var pass1=document.getElementById("password1").value;
+			var pass2=document.getElementById("password2").value;
+
+			if(pass1==pass2){
+				alert("password match");
+				return true;
+			}
+			else{
+				alert("password do not match");
+				return false;
+			}
+		}
+	</script>
+	<style type="text/css">
+		body{
+			background-image: url(https://www.apple.com/v/macbook-air/g/images/meta/og__wmayxefn276q.png);
+			color: #000;
+			font-family: "Times New Roman",Times,serif;
+			font-size: large;
+		}
+		table{
+			background-image: url(https://i.pinimg.com/originals/1b/d7/8d/1bd78daab0bd76b6352dcefceb72c6ca.jpg);
+			width: 500px;
+			height: 1000px;
+			border-collapse: collapse;
+			table-layout: fixed;
+			padding: 10px;
+		}
+		td{
+			vertical-align: top;
+			padding: 5px;
+			word-wrap: break-word;
+		}
+
+		#fullpage{
+			margin-right: 200px;
+			margin-left: 500px;
+			margin-top: 100px;
+			margin-bottom: 100px;
+		}
+
+		.label_col{
+			text-align: right;
+		}
+
+		.input_col{
+			text-align: left;
+		}
+
+		.feedback_col{
+			text-align: center;
+			vertical-align: middle;
+			color: blue;
+			font-size: small;
+		}
+		.Button{
+			margin: auto;
+			text-align: center;
+			width: 50px;
+		}
+
+	</style>
+	<title>Phone Booking</title>
+</head>
+<body >
+	<form action="#" onsubmit="return validateForm();">
+		<div id="fullpage">
+			<h1 style="color: orange;">Apple Macbook Booking</h1>
+			<table border="0">
+				<tr>
+					<!--for taking first name input-->
+					<td class="label_col">First name:</td>
+			 		<td class="input_col"><input type="text" name="firstName" id="firstName" onblur="validateFirstName();" required=""></td>
+			 		<td class="feedback_col"><span id="firstNamePrompt">&nbsp;</span></td>
+				</tr>
+				<tr>
+					<!--for taking last name input-->
+					<td class="label_col">Last name:</td>
+			 		<td class="input_col"><input type="text" name="lastName" id="lastName" onblur="validateLastName();";></td>
+			 		<td class="feedback_col"><span id="lastNamePrompt">&nbsp;</span></td>
+				</tr>
+				<tr>
+					<!--for taking phone number input-->
+					<td class="label_col">Phone Number:</td>
+			 		<td class="input_col"><input type="text" name="phone" id="phone" onblur="validatePhone();" placeholder="xxxxxxxxxx" required=""></td>
+			 		<td class="feedback_col"><span id="phonePrompt">xxxxxxxxxx</span></td>
+				</tr>
+				<tr>
+					<!--for taking password input-->
+					<td colspan="3" style="text-align: center;">
+								Enter new Password:
+								<input type="password" id="password1"><br>
+								Confirm Password:
+								<input type="password" id="password2"><br>
+					</td>
+				</tr>
+				<tr>
+					<!--for taking model input-->
+					<td>MacBook Model	</td>
+					<td ><input type="radio" name="food" value="Air" checked>Air   99k<br>
+		 			<input type="radio" name="food" value="OnePlus7T">Pro  120k<br>
+		 			<input type="radio" name="food" value="OnePlus7">Desktop   200k<br></td>
+		 			<td onblur="checkModel();"><span id="phoneprice"><p id="phoneprice"></p></span>&nbsp;</td>
+				</tr>
+				<tr>
+					<!--for taking accessories input-->
+					<td>Extra Accessories	</td>
+					<td ><input type="checkbox" name="skills" value="Earphone">Earphone &nbsp; 4,000<br>
+		 			<input type="checkbox" name="skills" value="Chager">Storage &nbsp; 3,500<br>
+		 			<input type="checkbox" name="skills" value="AUX Connecter">AUX Cable  2,000</td>
+		 			<td ></td>
+				</tr>
+				<tr>
+			 		<td class="label_col">Dilvery Cost</td>
+			 		<td class="input_col" ><input type="text" name="price" value="500.00"  readonly></td>
+			 	</tr>
+			 	<tr>
+			 		<!--for taking address input-->
+					<td class="label_col">Address:</td>
+			 		<td class="input_col"><input type="text" name="address" id="Address" ></td>
+			 		<td></td>
+				</tr>
+				<tr>
+					<!--for taking pincode input-->
+					<td class="label_col">PIN Code:</td>
+			 		<td class="input_col"><input type="text" name="pincode" id="pincode" onblur="validatePINCode();" placeholder="xxxxxx"></td>
+			 		<td class="feedback_col"><span id="pinPrompt">xxxxxx</span></td>
+				</tr>
+				<tr>
+					<!--for taking Addhar input-->
+					<td class="label_col">Aadhar Number:</td>
+			 		<td class="input_col"><input type="text" name="Aadhar" id="Aadhar" onblur="validateAddhar();" placeholder="xxxxxx" required=""></td>
+			 		<td class="feedback_col"><span id="AddharPrompt">xxxxxx</span></td>
+				</tr>
+				<tr>
+					<td colspan="3" ><button  onclick="alert('Booking is Successful :) ' )">Submit</button></td>
+				</tr>
+			</table>
+			
+		</div>
+	</form>
+</body>
+</html>
