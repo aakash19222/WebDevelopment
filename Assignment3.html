@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comparison Between C++ and Java</title>
+	
+	<style type="text/css">
+		body{
+			background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-050.jpg);
+			background-color: #EEE;
+			font-family: Helvetica, Arial;
+		}
+
+		h1,h3{
+			margin:0;
+		}
+		h2{
+			font-size: 
+		}
+		a{
+			text-decoration: none;
+			color: red;
+		}
+		table{
+			border: 1px solid orange;
+			width: auto;
+		}
+		td{
+			border: 1px solid black;
+			text-align: auto;
+			padding: 8px;
+		}
+		tr:nth-child(even){
+			background-color: lightgray;
+		}
+		tr:nth-child(odd){
+			background-color: white;
+		}
+		#photo{
+			height: 100px	
+		}
+		#container{
+			background-image: url(https://toolbox.brightspotcdn.com/dims4/default/5d497b6/2147483647/resize/800x%3E/quality/90/?url=http%3A%2F%2Fziff-davis-brightspot.s3.amazonaws.com%2Fa4%2Ffb%2F96b9961e4b169f8ef87ebae5a16c%2Fistock-871030872.jpg);
+			text-align: center;
+			width: 1000px;
+			margin-left: auto;
+			margin-right: auto; 
+		}
+		#header{
+			background-color: brown;
+			color: white;
+			text-align: center;
+		}
+		#nav{
+			background-image: url(https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-1.2.1&w=1000&q=80);
+			width: 150px;
+			float: left;
+		}
+		#content{
+			padding: 50px;
+		}
+		#nav ul{
+			list-style-type: none;
+			padding: 0;
+		}
+		#nav.selected{
+			font-weight: bold;
+		}
+		#main{
+			height: 380px;
+			width: 600px;
+			float: right;
+		}
+		#footer{
+			clear: both;
+			padding: 10px;
+			background-color: #999999;
+			color: white;
+			text-align: left;
+		}
+	</style>
+	<script type="text/javascript">
+		function outputName() {
+			// body...
+			var testinput=document.getElementById("name").value;
+			if(testinput.length == 0){
+				document.getElementById("para").innerHTML="Hey, you didn't enter anything!";
+			}
+			else{
+				document.getElementById("para").innerHTML=testinput+" thanks for your visit :) ";
+			}
+		}
+	</script>
+</head>
+<body onload ="alert('Hi, You are Welcome :)')" >
+	<div id="container">
+		<div id="header">
+			<h1>Comparison Between C++ and Java</h1>	
+		</div>
+		<div id="content">
+
+			<div id="nav">
+				<p style="font-style: Helvetica ; color: blue;">Click for more Info</p>
+				<ul>
+					<li><a class href="https://www.w3schools.com/java/">Java Learn</a></li>
+					<li><a href="https://www.w3schools.com/cpp/">C++ Learn</a></li>
+					<li><a href="https://www.softwaretestinghelp.com/cpp-vs-java/">Deep comparision</a></li>
+				</ul>
+			</div>
+			<div id="main">
+				<table>
+					<tr>
+						<td>Differences</td><td>Java</td><td>C++</td>
+					</tr>
+					<tr>
+						<td>Platform</td><td>Independent</td><td>Dependent</td>
+					</tr>
+					<tr>
+						<td>Run</td><td>Java is interpreted</td><td>C++ is compiled.</td>
+					</tr>
+					<tr>
+						<td>Destructor</td><td>Java does not support destructor</td><td>C++ supports destructors</td>
+					</tr>
+					<tr>
+						<td>Storage</td><td>Java supports garbage collection</td><td>C++ does not supports garbage collection</td>
+					</tr>
+					<tr>
+						<td>Symbol</td><td><img id="photo" src="https://img.favpng.com/17/0/17/java-logo-png-favpng-DLF12zZMm6yTJJKHT3vpx32ey.jpg"></td><td><img id="photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1024px-ISO_C%2B%2B_Logo.svg.png"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="footer">
+			<input type="test" id="name">
+			<button onclick="outputName();">Enter Name and Click to continue</button>
+			<p id="para" style="color: #CC3366;"></p>
+		</div>
+	</div>
+	
+</body>
+</html>
